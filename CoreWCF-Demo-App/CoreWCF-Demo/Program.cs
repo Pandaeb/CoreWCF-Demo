@@ -36,6 +36,16 @@ try
 
     builder.Services.ConfigureServices(builder.Configuration);
 
+    // Needed only for ServiceEndpoint configured with BasicHttpBinding and Basic Auth
+    /*
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = UserPasswordSchemeOptions.Name;
+        options.DefaultChallengeScheme = UserPasswordSchemeOptions.Name;
+    })
+    .AddScheme<UserPasswordSchemeOptions, UserPasswordSchemeHandler>(UserPasswordSchemeOptions.Name, null);
+    */
+
     var app = builder.Build();
 
     var customBinding = BindingFactory.PrepareCustomBinding(builder.Configuration);
@@ -75,6 +85,9 @@ try
     serviceMetadataBehavior.HttpGetUrl = new Uri(argsUrlHttp + "/metadata");
 
     app.UseHttpsRedirection();
+
+    // Needed only for ServiceEndpoint configured with BasicHttpBinding and Basic Auth
+    //app.UseAuthentication();
 
     if (_logger.IsInfoEnabled)
         _logger.Info("All configuration succeeded. Application run...");

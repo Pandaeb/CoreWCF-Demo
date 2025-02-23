@@ -1,7 +1,6 @@
 ﻿using CoreWCF;
 using log4net;
 
-//using log4net;
 using System.Reflection;
 
 namespace CoreWCF_Demo_Infrastructure.AuthSchemes.UserPasswordScheme

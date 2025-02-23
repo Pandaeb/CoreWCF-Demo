@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using System.IO.Pipelines;
 using System.Text;
 using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace CoreWCF_Demo_Infrastructure.AuthSchemes.UserPasswordScheme
