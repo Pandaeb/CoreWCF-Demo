@@ -1,6 +1,7 @@
 # CoreWCF-Demo
 ## ASP.NET Core Web App configured as WCF server 
-### Default service contract and endpoint that is exposed are configured with compliance to OTA (Open Travel Alliance) standards.
+
+**Default service contract and endpoint that is exposed are configured with compliance to OTA (Open Travel Alliance) standards.**
 
 **This solution implements:**
 - custom error handling
