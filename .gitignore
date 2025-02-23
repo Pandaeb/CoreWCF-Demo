@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CoreWCF-Demo-App/.vs/CoreWCF-Demo-App
+/CoreWCF-Demo-App/CoreWCF-Demo/obj
+/CoreWCF-Demo-App/CoreWCF-Demo/bin/Debug/net8.0
+/CoreWCF-Demo-App/CoreWCF-Demo-Infrastructure/bin/Debug/net8.0
+/CoreWCF-Demo-App/CoreWCF-Demo-Infrastructure/obj
