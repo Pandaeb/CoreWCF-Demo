@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>CoreWCF_Demo_Infrastructure</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.Http" Version="1.7.0" />
+    <PackageReference Include="CoreWCF.Primitives" Version="1.7.0" />
+    <PackageReference Include="CoreWCF.WebHttp" Version="1.7.0" />
+    <PackageReference Include="log4net" Version="3.0.4" />
+  </ItemGroup>
+
+</Project>

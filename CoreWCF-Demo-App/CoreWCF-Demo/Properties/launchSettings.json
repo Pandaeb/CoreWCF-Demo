@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "CoreWCF-Demo": {
+      "commandLineArgs": "--port 51103 --ipAddress 127.0.0.1",
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:51102"
+    }
+  }
+}

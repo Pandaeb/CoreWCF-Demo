@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<log4net>
+  <appender name="RegularLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file type="log4net.Util.PatternString" value="D://logs//CoreWcfDemo//WcfDemo_" />
+    <appendToFile value="true" />
+    <datePattern value="yyyyMMdd-HH\.\l\o\g" />
+    <staticLogFileName value="false" />
+    <rollingStyle value="Date" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d %r [%t] [%-5p] [%c] - %m%n" />
+    </layout>
+  </appender>
+  <appender name="QueuingAppender" type="ESS.Log4netQueuingAppender.QueuingAppender, Log4NetQueuingAppender">
+    <Lossy value="false" />
+    <appender-ref ref="RollingLogFileAppender" />
+  </appender>
+
+  <root>
+    <level value="ALL" />
+    <appender-ref ref="RegularLogFileAppender" />
+  </root>
+
+  <logger name="ReqResLogger" additivity="false">
+    <level value="ALL" />
+    <appender-ref ref="ReqResLogFileAppender" />
+  </logger>
+  <appender name="ReqResLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file type="log4net.Util.PatternString" value="D://logs//CoreWcfDemo//ReqRes//WcfDemo_" />
+    <appendToFile value="true" />
+    <datePattern value="yyyyMMdd-HH\.\l\o\g" />
+    <staticLogFileName value="false" />
+    <rollingStyle value="Date" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d %r [%t] [%-5p] [%c] - %m%n" />
+    </layout>
+  </appender>
+  <appender name="QueuingAppender" type="ESS.Log4netQueuingAppender.QueuingAppender, Log4NetQueuingAppender">
+    <Lossy value="false" />
+    <appender-ref ref="ReqResLogFileAppender" />
+  </appender>
+</log4net>
